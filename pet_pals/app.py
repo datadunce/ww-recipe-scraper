@@ -17,7 +17,7 @@ app = Flask(__name__)
 #################################################
 
 from flask_sqlalchemy import SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://havcrucfklhxkb:81370c5c689e86df56f2ae1b69976b8530fda076d0c74d2b56e34dd7eb253e64@ec2-107-22-160-185.compute-1.amazonaws.com:5432/dflusf4tu5bpr5', '') or "sqlite:///db.sqlite"
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
 db = SQLAlchemy(app)
 
