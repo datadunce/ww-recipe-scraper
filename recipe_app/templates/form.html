@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet Form</title>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="text-align: center">
+                <h1>Recipe Scraper</h1>
+                <p>Enter the url of the recipe that you are trying to find!</p>
+                <p>Example: https://www.closetcooking.com/creamy-shrimp-alfredo-linguine/</p>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <form method="POST" action="/send" role="form" , name="urlform">
+                        <div class="form-group" style="font-size: 1.5rem">
+                            <label for="inputName">URL</label>
+                            <input type="text" class="form-control" id="inputName" name="urlName" placeholder="Recipe Url">
+                        </div>
+                        <input type="submit" value="submit" class="btn btn-default" style="font-size: 1.5rem">
+                    </form>
+                </div>
+            </div>
+            <div style="text-align: center">
+                <h1>Scrapers available for:</h1>
+                <ul style="list-style: none; font-size: 1.5rem">
+                    <li><a href="http://101cookbooks.com/">http://101cookbooks.com/</a></li>
+                    <li><a href="http://allrecipes.com/">http://allrecipes.com/</a></li>
+                    <li><a href="http://bbc.com/">http://bbc.com/</a></li>
+                    <li><a href="http://bbc.co.uk/">http://bbc.co.uk/</a></li>
+                    <li><a href="http://bbcgoodfood.com/">http://bbcgoodfood.com/</a></li>
+                    <li><a href="http://bonappetit.com/">http://bonappetit.com/</a></li>
+                    <li><a href="https://www.budgetbytes.com/">https://www.budgetbytes.com/</a></li>
+                    <li><a href="http://closetcooking.com/">http://closetcooking.com/</a></li>
+                    <li><a href="http://cookstr.com/">http://cookstr.com/</a></li>
+                    <li><a href="https://en.wikibooks.org/">https://en.wikibooks.org/</a></li>
+                    <li><a href="http://epicurious.com/">http://epicurious.com/</a></li>
+                    <li><a href="http://finedininglovers.com/">http://finedininglovers.com/</a></li>
+                    <li><a href="http://foodnetwork.com/">http://foodnetwork.com/</a></li>
+                    <li><a href="http://foodrepublic.com/">http://foodrepublic.com/</a></li>
+                    <li><a href="https://geniuskitchen.com/">https://geniuskitchen.com/</a></li>
+                    <li><a href="http://giallozafferano.it/">http://giallozafferano.it/</a></li>
+                    <li><a href="https://healthyeating.nhlbi.nih.gov/">https://healthyeating.nhlbi.nih.gov/</a></li>
+                    <li><a href="https://www.hellofresh.com/">https://www.hellofresh.com/</a></li>
+                    <li><a href="https://www.hellofresh.co.uk/">https://www.hellofresh.co.uk/</a></li>
+                    <li><a href="https://inspiralized.com/">https://inspiralized.com/</a></li>
+                    <li><a href="http://jamieoliver.com/">http://jamieoliver.com/</a></li>
+                    <li><a href="http://mybakingaddiction.com/">http://mybakingaddiction.com/</a></li>
+                    <li><a href="http://paninihappy.com/">http://paninihappy.com/</a></li>
+                    <li><a href="http://realsimple.com/">http://realsimple.com/</a></li>
+                    <li><a href="https://www.seriouseats.com/">https://www.seriouseats.com/</a></li>
+                    <li><a href="http://simplyrecipes.com/">http://simplyrecipes.com/</a></li>
+                    <li><a href="http://steamykitchen.com/">http://steamykitchen.com/</a></li>
+                    <li><a href="https://www.tastesoflizzyt.com">https://www.tastesoflizzyt.com</a></li>
+                    <li><a href="http://tastykitchen.com/">http://tastykitchen.com/</a></li>
+                    <li><a href="http://thepioneerwoman.com/">http://thepioneerwoman.com/</a></li>
+                    <li><a href="http://thehappyfoodie.co.uk/">http://thehappyfoodie.co.uk/</a></li>
+                    <li><a href="http://thevintagemixer.com/">http://thevintagemixer.com/</a></li>
+                    <li><a href="http://twopeasandtheirpod.com/">http://twopeasandtheirpod.com/</a></li>
+                    <li><a href="http://whatsgabycooking.com/">http://whatsgabycooking.com/</a></li>
+                    <li><a href="http://yummly.com/">http://yummly.com/</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
