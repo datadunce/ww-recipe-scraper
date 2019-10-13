@@ -12,7 +12,6 @@ Jinja2==2.10.3
 keyring==17.0.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
-mpld3==0.3.1.dev1
 numpy==1.17.2
 pandas==0.25.1
 pew==1.1.2
