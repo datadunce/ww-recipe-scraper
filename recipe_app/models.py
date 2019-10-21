@@ -31,17 +31,27 @@ class Recipe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.String(128), index=True, unique=True)
     title = db.Column(db.String(64))
+<<<<<<< Updated upstream
     users = relationship(User, secondary='user_recipe_link')
     # ingredients = db.Column(db.
     # instructions = db.Column(db.String(128))
 
+=======
+    users = relationship(User,secondary='user_recipe_link')
+    # ingredients = db.Column(db.
+    # instructions = db.Column(db.String(128))
+    
+>>>>>>> Stashed changes
 
 class User_Recipe_Link(db.Model):
     __tablename__ = 'user_recipe_link'
     user_id = Column(Integer, ForeignKey('users.id'), primary_key=True)
     recipe_id = Column(Integer, ForeignKey('recipes.id'), primary_key=True)
     date = Column(DateTime, default=datetime.utcnow)
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     def __repr__(self):
         return '<URL {}>'.format(self.url)
 
