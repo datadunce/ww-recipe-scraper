@@ -16,6 +16,7 @@ def get_recipes(url):
         scraper = scrape_me(url)
     except KeyError:
         print('Website is not supported')
+
     data = {}
     data['title'] = scraper.title()
     data['ttime'] = scraper.total_time()
